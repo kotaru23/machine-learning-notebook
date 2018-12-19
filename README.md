@@ -7,4 +7,3 @@
     - tensorflow-gpu
     - xgboost
     - ... and so on.
-* Vim key binding
