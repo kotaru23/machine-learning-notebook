@@ -2,8 +2,7 @@ FROM kotaru/gpu-base-notebook:latest
 
 # install Python library for machine learning
 # Enable multi-gpu xgboost
-RUN wget https://s3-us-west-2.amazonaws.com/xgboost-wheels/xgboost-0.81-py2.py3-none-manylinux1_x86_64.whl && \
-    pip3 --no-cache-dir install --upgrade pip && \
+RUN pip3 --no-cache-dir install --upgrade pip && \
     pip3 --no-cache-dir install \
         numpy \
         scipy \
@@ -34,7 +33,7 @@ RUN wget https://s3-us-west-2.amazonaws.com/xgboost-wheels/xgboost-0.81-py2.py3-
         line_profiler \
         memory_profiler \
         rise \
-        xgboost-0.81-py2.py3-none-manylinux1_x86_64.whl
+        xgboost
 
 WORKDIR /notebooks
 EXPOSE 8888
