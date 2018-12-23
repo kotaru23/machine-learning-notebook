@@ -33,7 +33,8 @@ RUN pip3 --no-cache-dir install --upgrade pip && \
         line_profiler \
         memory_profiler \
         rise \
-        xgboost
+        xgboost \
+        optuna
 
 WORKDIR /notebooks
 EXPOSE 8888
